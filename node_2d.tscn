@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d4csru62m2s7g"]
+
+[ext_resource type="Script" uid="uid://bcnsk20rqccv3" path="res://vector_field.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://cd36i6556h6ex" path="res://gaussian_curl.gd" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://dtjfdrxgcd4jp" path="res://field_visualizer.gd" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=1036498431]
+
+[node name="VectorField" type="Node2D" parent="." unique_id=1363210288]
+script = ExtResource("1_0e48y")
+
+[node name="GuassianCurl" type="Node2D" parent="VectorField" unique_id=389516723]
+script = ExtResource("2_0hol4")
+
+[node name="FieldVisualizer" type="Node2D" parent="VectorField" unique_id=1971414777]
+script = ExtResource("2_epypp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1063050127]

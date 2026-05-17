@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b5mt4c4735irc"]
+
+[ext_resource type="Script" uid="uid://bcnsk20rqccv3" path="res://vector_field.gd" id="1_7ln2e"]
+
+[node name="Vector Field" type="Node2D" unique_id=626494466]
+script = ExtResource("1_7ln2e")
