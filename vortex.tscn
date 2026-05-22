@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dh87o1fjb5280"]
+
+[ext_resource type="Script" uid="uid://ditp0v2b4gtqm" path="res://vortex.gd" id="1_r3toa"]
+[ext_resource type="Script" uid="uid://cyrll182fa858" path="res://click_drag.gd" id="2_nk8o5"]
+[ext_resource type="Texture2D" uid="uid://cm64ov0miny11" path="res://icon.svg" id="3_3tumw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uaky"]
+
+[node name="Vortex" type="Node2D" unique_id=277748306]
+script = ExtResource("1_r3toa")
+metadata/_custom_type_script = "uid://8q5hi6v4253b"
+
+[node name="ClickDrag" type="Area2D" parent="." unique_id=964007849]
+script = ExtResource("2_nk8o5")
+
+[node name="Mousesprite" type="Sprite2D" parent="ClickDrag" unique_id=1905421159]
+scale = Vector2(0.1553195, 0.14692304)
+texture = ExtResource("3_3tumw")
+
+[node name="Rect" type="CollisionShape2D" parent="ClickDrag" unique_id=1107368221]
+shape = SubResource("RectangleShape2D_0uaky")

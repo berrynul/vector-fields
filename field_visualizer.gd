@@ -1,9 +1,13 @@
 extends Node2D
 
-@export var grid_size: Vector2i = Vector2i(20, 20)
+@export var grid_size: Vector2i = Vector2i(50, 30)
 @export var cell_size: float = 32.0
 @export var reference_magnitude: float = 50   # vector length that draws at max visual size
-
+@export var object : Node2D 
+func _ready():
+	if object == null:
+		object = get_parent()
+	
 func _process(_delta: float) -> void:
 	queue_redraw()
 
@@ -14,8 +18,8 @@ func _draw() -> void:
 	
 	for y in grid_size.y:
 		for x in grid_size.x:
-			var sample_pos := (Vector2(x, y) + Vector2(0.5, 0.5)) * cell_size
-			var vec: Vector2 = get_parent().f(sample_pos)
+			var sample_pos := (Vector2(x, y) - Vector2(20, 10)) * cell_size
+			var vec: Vector2 = object.f(sample_pos)
 			var magnitude := vec.length()
 			
 			if magnitude < 0.01:
@@ -45,7 +49,7 @@ func draw_arrow(from: Vector2, to: Vector2, color: Color,
 	var perp := Vector2(-dir.y, dir.x)
 	
 	# line: full length, untouched by head_size
-	draw_line(from, to, color, width)
+	draw_line(from, to, color, width, true)
 	
 	# triangle: base at `to`, tip extends forward by `head`
 	draw_colored_polygon([

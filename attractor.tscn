@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dpakyaoqmusud"]
+
+[ext_resource type="Script" uid="uid://b7hs8p86mjg68" path="res://attractor.gd" id="1_0uaky"]
+[ext_resource type="Texture2D" uid="uid://cm64ov0miny11" path="res://icon.svg" id="2_myr3q"]
+[ext_resource type="Script" uid="uid://cyrll182fa858" path="res://click_drag.gd" id="3_0uaky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uaky"]
+
+[node name="Attractor" type="Node2D" unique_id=277748306]
+script = ExtResource("1_0uaky")
+metadata/_custom_type_script = "uid://8q5hi6v4253b"
+
+[node name="ClickDrag" type="Area2D" parent="." unique_id=964007849]
+script = ExtResource("3_0uaky")
+
+[node name="Mousesprite" type="Sprite2D" parent="ClickDrag" unique_id=1905421159]
+scale = Vector2(0.1553195, 0.14692304)
+texture = ExtResource("2_myr3q")
+
+[node name="Rect" type="CollisionShape2D" parent="ClickDrag" unique_id=1107368221]
+shape = SubResource("RectangleShape2D_0uaky")

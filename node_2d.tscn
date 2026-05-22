@@ -1,18 +1,24 @@
 [gd_scene format=3 uid="uid://d4csru62m2s7g"]
 
-[ext_resource type="Script" uid="uid://bcnsk20rqccv3" path="res://vector_field.gd" id="1_0e48y"]
-[ext_resource type="Script" uid="uid://cd36i6556h6ex" path="res://gaussian_curl.gd" id="2_0hol4"]
+[ext_resource type="PackedScene" uid="uid://dcq0irhrxbhmp" path="res://vector_field_sum.tscn" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://dh87o1fjb5280" path="res://vortex.tscn" id="2_0hol4"]
 [ext_resource type="Script" uid="uid://dtjfdrxgcd4jp" path="res://field_visualizer.gd" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://dpakyaoqmusud" path="res://attractor.tscn" id="3_epypp"]
 
-[node name="Node2D" type="Node2D" unique_id=1036498431]
+[node name="Node2D" type="Node2D" unique_id=1607666072]
 
-[node name="VectorField" type="Node2D" parent="." unique_id=1363210288]
-script = ExtResource("1_0e48y")
+[node name="VectorFieldSum" parent="." unique_id=1237621659 instance=ExtResource("1_0e48y")]
 
-[node name="GuassianCurl" type="Node2D" parent="VectorField" unique_id=389516723]
-script = ExtResource("2_0hol4")
+[node name="Vortex" parent="VectorFieldSum" unique_id=668429448 instance=ExtResource("2_0hol4")]
+position = Vector2(134, 97)
 
-[node name="FieldVisualizer" type="Node2D" parent="VectorField" unique_id=1971414777]
+[node name="Attractor3" parent="VectorFieldSum" unique_id=2133334247 instance=ExtResource("3_epypp")]
+position = Vector2(347, 111)
+
+[node name="Vortex2" parent="VectorFieldSum" unique_id=1781936256 instance=ExtResource("2_0hol4")]
+position = Vector2(258, 107)
+polarity = 1
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1338570207 node_paths=PackedStringArray("object")]
 script = ExtResource("2_epypp")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1063050127]
+object = NodePath("../VectorFieldSum")
