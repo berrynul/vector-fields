@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dv6v02bv7x0ja"]
+
+[ext_resource type="Script" uid="uid://cyrll182fa858" path="res://click_drag.gd" id="1_bhcsa"]
+[ext_resource type="Texture2D" uid="uid://cm64ov0miny11" path="res://icon.svg" id="2_2ds2e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uaky"]
+
+[node name="ClickDrag" type="Area2D" unique_id=504315807]
+script = ExtResource("1_bhcsa")
+
+[node name="Mousesprite" type="Sprite2D" parent="." unique_id=1768817963]
+scale = Vector2(0.1553195, 0.14692304)
+texture = ExtResource("2_2ds2e")
+
+[node name="Rect" type="CollisionShape2D" parent="." unique_id=2110296889]
+shape = SubResource("RectangleShape2D_0uaky")

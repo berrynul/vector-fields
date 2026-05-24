@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bcwq7waj0evmn"]
+
+[ext_resource type="Script" uid="uid://b7hs8p86mjg68" path="res://attractor.gd" id="1_i2u2g"]
+[ext_resource type="PackedScene" uid="uid://dv6v02bv7x0ja" path="res://click_drag.tscn" id="2_tv4qs"]
+
+[node name="AttractorTest" type="Node2D" unique_id=277748306]
+script = ExtResource("1_i2u2g")
+field_group = "electric"
+metadata/_custom_type_script = "uid://8q5hi6v4253b"
+
+[node name="ClickDrag" parent="." unique_id=504315807 instance=ExtResource("2_tv4qs")]

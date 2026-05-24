@@ -2,5 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csq8q2icsphn4" path="res://vector_field_sum.gd" id="1_ecm8r"]
 
-[node name="VectorFieldSum" type="Node2D" unique_id=1237621659]
+[node name="VectorFieldSum" type="Node2D" unique_id=1006696394]
 script = ExtResource("1_ecm8r")
+field_group = "electric"
+metadata/_custom_type_script = "uid://csq8q2icsphn4"

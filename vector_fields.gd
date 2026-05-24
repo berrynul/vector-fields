@@ -1,16 +1,10 @@
 extends Node2D
 class_name VectorField
-@export var field : Callable
+@export_enum("electric") var field_group: String 
 
-
+func _ready():
+	add_to_group(field_group)
 
 
 	
 	
-
-
-func vf_add(P: VectorField, R: VectorField):
-	
-	
-	
-	return 1

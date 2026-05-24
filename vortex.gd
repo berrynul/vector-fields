@@ -4,6 +4,8 @@ extends VectorField
 @export_enum("-1:-1", "1:1")  var polarity = -1
 
 var gp = Vector2(0,0)
+
+
 func _ready():
 
 	
