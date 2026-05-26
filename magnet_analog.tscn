@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dfk6unvwcpmp4"]
+
+[ext_resource type="Script" uid="uid://bfqmg570ewxnm" path="res://square_interact.gd" id="1_55y7r"]
+[ext_resource type="PackedScene" uid="uid://dpakyaoqmusud" path="res://attractor.tscn" id="2_ujka7"]
+[ext_resource type="Texture2D" uid="uid://cm64ov0miny11" path="res://icon.svg" id="3_7y7c5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jomfo"]
+size = Vector2(60, 60)
+
+[node name="MagnetAnalog" type="Area2D" unique_id=1885802807]
+script = ExtResource("1_55y7r")
+metadata/_custom_type_script = "uid://bfqmg570ewxnm"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1588916751]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_7y7c5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1169293588]
+shape = SubResource("RectangleShape2D_jomfo")
+
+[node name="Attractor2" parent="." unique_id=1144960319 instance=ExtResource("2_ujka7")]
+position = Vector2(-25, 0)
+magnitude = 10

@@ -4,4 +4,5 @@
 
 [node name="Attractor" type="Node2D" unique_id=277748306]
 script = ExtResource("1_0uaky")
+field_group = "electric"
 metadata/_custom_type_script = "uid://8q5hi6v4253b"

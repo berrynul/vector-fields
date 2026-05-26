@@ -1,26 +1,18 @@
 [gd_scene format=3 uid="uid://d4csru62m2s7g"]
 
 [ext_resource type="PackedScene" uid="uid://dcq0irhrxbhmp" path="res://vector_field_sum.tscn" id="1_0e48y"]
-[ext_resource type="PackedScene" uid="uid://bcwq7waj0evmn" path="res://attractor_test.tscn" id="2_0hol4"]
 [ext_resource type="Script" uid="uid://dtjfdrxgcd4jp" path="res://field_visualizer.gd" id="2_epypp"]
-[ext_resource type="PackedScene" uid="uid://cuj0rquvdw2i0" path="res://square_interact.tscn" id="3_0hol4"]
-[ext_resource type="PackedScene" uid="uid://dpakyaoqmusud" path="res://attractor.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://dfk6unvwcpmp4" path="res://magnet_analog.tscn" id="3_0hol4"]
 
 [node name="Node2D" type="Node2D" unique_id=1607666072]
 
+[node name="MagnetAnalog" parent="." unique_id=1885802807 instance=ExtResource("3_0hol4")]
+position = Vector2(275, 396)
+rotation = -3.1271093
+
 [node name="VectorFieldSum" parent="." unique_id=1237621659 instance=ExtResource("1_0e48y")]
 
-[node name="AttractorTest3" parent="VectorFieldSum" unique_id=277748306 instance=ExtResource("2_0hol4")]
-position = Vector2(717, 44)
-polarity = 1
-
-[node name="AttractorTest" parent="VectorFieldSum" unique_id=1306101774 instance=ExtResource("3_epypp")]
-position = Vector2(103, 100)
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1338570207 node_paths=PackedStringArray("object")]
+[node name="Node2D" type="Node2D" parent="." unique_id=1857945397 node_paths=PackedStringArray("object")]
 script = ExtResource("2_epypp")
-grid_size = Vector2i(80, 32)
+grid_size = Vector2i(70, 50)
 object = NodePath("../VectorFieldSum")
-
-[node name="SquareInteract" parent="." unique_id=1885802807 instance=ExtResource("3_0hol4")]
-position = Vector2(591, 349)

@@ -1,5 +1,4 @@
 extends VectorField
-@onready var control_node = get_node("ClickDrag")
 @export var magnitude = 100
 @export_enum("-1:-1", "1:1")  var polarity = -1
 
@@ -31,7 +30,7 @@ func sq_integ(xy: Vector2, L: float):
 	return Vector2(Ix, Iy)
 
 func _process(_delta: float) -> void:
-	gp = control_node.global_position
+	gp = global_position
 	
 	
 func f(xy: Vector2):

@@ -5,6 +5,7 @@ var gp = Vector2(0,0)
 @export var mass = 20
 var acceleration = Vector2(0,0)
 var velocity = Vector2(0,0)
+var L
 
 
 

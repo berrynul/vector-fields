@@ -2,15 +2,20 @@
 
 [ext_resource type="Script" uid="uid://bfqmg570ewxnm" path="res://square_interact.gd" id="1_hxlvd"]
 [ext_resource type="Texture2D" uid="uid://cm64ov0miny11" path="res://icon.svg" id="2_iukv3"]
+[ext_resource type="PackedScene" uid="uid://dpakyaoqmusud" path="res://attractor.tscn" id="2_jomfo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jomfo"]
 size = Vector2(60, 60)
 
-[node name="SquareInteract" type="Area2D" unique_id=1885802807]
+[node name="MagnetAnalog" type="Area2D" unique_id=1885802807]
 script = ExtResource("1_hxlvd")
 metadata/_custom_type_script = "uid://bfqmg570ewxnm"
 
+[node name="Negative" parent="." unique_id=1649000249 instance=ExtResource("2_jomfo")]
+position = Vector2(-30, 0)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1588916751]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_iukv3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1169293588]
