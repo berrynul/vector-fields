@@ -15,10 +15,13 @@ func f(xy: Vector2):
 	return sum
 	
 #this is used by square areas to determine the total vector encapsulated within the area
-func sq_integ_sum(xy, L:float):
+func sq_integ_sum(xy, L:float, internals):
 	var fields: Array = get_tree().get_nodes_in_group(field_group)
 	var sum = Vector2(0,0)
 	for P in fields:
 		if P is VectorField:
 			sum += P.sq_integ(xy, L)
+	for internal in internals:
+		if internal is VectorField:
+			sum -= internal.sq_integ(xy, L)
 	return sum

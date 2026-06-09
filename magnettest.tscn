@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://duldrf8boxcax"]
+
+[ext_resource type="PackedScene" uid="uid://dfk6unvwcpmp4" path="res://magnet_analog.tscn" id="1_bx3ww"]
+[ext_resource type="PackedScene" uid="uid://dcq0irhrxbhmp" path="res://vector_field_sum.tscn" id="2_ibvgx"]
+
+[node name="Node2D" type="Node2D" unique_id=1617420241]
+
+[node name="MagnetAnalog" parent="." unique_id=807428027 instance=ExtResource("1_bx3ww")]
+position = Vector2(504, 245)
+
+[node name="MagnetAnalog2" parent="." unique_id=490002181 instance=ExtResource("1_bx3ww")]
+position = Vector2(335, 242)
+
+[node name="VectorFieldSum" parent="." unique_id=1006696394 instance=ExtResource("2_ibvgx")]

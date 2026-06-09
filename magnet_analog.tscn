@@ -7,9 +7,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jomfo"]
 size = Vector2(60, 60)
 
-[node name="MagnetAnalog" type="Area2D" unique_id=1885802807]
+[node name="MagnetAnalog" type="RigidBody2D" unique_id=807428027]
 script = ExtResource("1_55y7r")
-metadata/_custom_type_script = "uid://bfqmg570ewxnm"
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1789362407]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1588916751]
 scale = Vector2(0.5, 0.5)
@@ -18,6 +19,13 @@ texture = ExtResource("3_7y7c5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1169293588]
 shape = SubResource("RectangleShape2D_jomfo")
 
-[node name="Attractor2" parent="." unique_id=1144960319 instance=ExtResource("2_ujka7")]
+[node name="Internals" type="Node2D" parent="." unique_id=448633779]
+
+[node name="negative" parent="Internals" unique_id=1144960319 instance=ExtResource("2_ujka7")]
 position = Vector2(-25, 0)
-magnitude = 10
+magnitude = 0
+
+[node name="positive" parent="Internals" unique_id=277748306 instance=ExtResource("2_ujka7")]
+position = Vector2(25, 0)
+magnitude = 0
+polarity = 1

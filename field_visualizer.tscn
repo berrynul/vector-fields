@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://m0x4c5yhhhsj"]
+
+[ext_resource type="Script" uid="uid://dtjfdrxgcd4jp" path="res://field_visualizer.gd" id="1_vhqbj"]
+
+[node name="FieldVisualizer" type="Node2D" unique_id=1318687822 node_paths=PackedStringArray("object")]
+script = ExtResource("1_vhqbj")
+grid_size = Vector2i(70, 50)
+object = NodePath("")

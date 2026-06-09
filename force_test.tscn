@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dc365vw6hu72q"]
+
+[ext_resource type="Script" uid="uid://chn63tcx1dcwi" path="res://rigidbody_force_test.gd" id="1_oolme"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etojo"]
+
+[node name="ForceTest" type="Node2D" unique_id=1694617854]
+
+[node name="TestRigid" type="RigidBody2D" parent="." unique_id=1762506447]
+position = Vector2(227, 115)
+script = ExtResource("1_oolme")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestRigid" unique_id=1937728275]
+shape = SubResource("RectangleShape2D_etojo")
+
+[node name="RayCast2D" type="RayCast2D" parent="TestRigid" unique_id=1940820684]
